@@ -7,8 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './auth/auth.service';
 import { CallbackComponent } from './callback/callback.component';
 import { HelloService } from './hello/hello.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HelloComponent } from './hello/hello.component';
+import { TokenInterceptor } from './auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,12 @@ import { HelloComponent } from './hello/hello.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AuthService, HelloService],
+  providers: [AuthService, HelloService,
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

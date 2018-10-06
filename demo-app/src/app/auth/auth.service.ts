@@ -17,6 +17,7 @@ export class AuthService {
   constructor(private router:Router){}
 
   private loggedInKey = "isLoggedIn";
+  private tokenDataKey = "tokenData";
 
   // Authentication Navigation
   returnURL = environment.auth.logoutURL;
@@ -67,6 +68,7 @@ export class AuthService {
 
   logout = () => {
     localStorage.setItem(this.loggedInKey, JSON.stringify(false));
+    localStorage.removeItem(this.tokenDataKey);
     this.auth0.logout({
       returnTo: this.returnURL,
       clientID: environment.auth.clientID
@@ -105,9 +107,10 @@ export class AuthService {
     var tokenData = {
       expiresAt: authResult.expiresIn * 1000 + Date.now(),
       accessToken: authResult.accessToken,
-      idToken: authResult.idToken
+      idToken: authResult.idToken,
+      nickName: authResult.idTokenPayload.nickname
     };
-    localStorage.setItem('tokenData', JSON.stringify(tokenData));
+    localStorage.setItem(this.tokenDataKey, JSON.stringify(tokenData));
 
     this.tokenData$.next(tokenData);
     this.userProfile$.next(authResult.idTokenPayload);

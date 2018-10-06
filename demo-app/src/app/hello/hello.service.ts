@@ -12,13 +12,14 @@ export class HelloService{
     constructor(private http:HttpClient,
          private authService: AuthService){}
 
-    public getTodaysQuote(){
+    public getTodaysQuote(name:string){
         var token = this.authService.getToken().idToken;
         var httpOptions = {
         headers: new HttpHeaders({
           'Content-Type':  'application/json',
           'Authorization': `Bearer ${token}`
         })};
-        return this.http.get(environment.helloApi.url, httpOptions);
+        var helloApiUrl = `${environment.helloApi.url}?name=${name}`
+        return this.http.get(helloApiUrl, httpOptions);
       }
 }

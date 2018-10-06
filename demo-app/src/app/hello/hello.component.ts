@@ -15,7 +15,7 @@ export class HelloComponent implements OnInit {
             private service: HelloService) { }
 
   ngOnInit() {
-    this.service.getTodaysQuote()
+    this.service.getTodaysQuote(this.name)
       .subscribe((response: string) =>{
         this.welcomeQuote = response;
       })
