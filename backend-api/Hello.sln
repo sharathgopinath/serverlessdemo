@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hello", "Hello\Hello.csproj", "{4D52B13F-1C94-4042-AB52-75D659EE0434}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security", "Security\Security.csproj", "{3AED6F00-BA0A-4E98-A4F5-DF33F4AC9D02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4F708546-47AD-4111-B8A7-93D3174DDFE1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D52B13F-1C94-4042-AB52-75D659EE0434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D52B13F-1C94-4042-AB52-75D659EE0434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D52B13F-1C94-4042-AB52-75D659EE0434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D52B13F-1C94-4042-AB52-75D659EE0434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AED6F00-BA0A-4E98-A4F5-DF33F4AC9D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AED6F00-BA0A-4E98-A4F5-DF33F4AC9D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AED6F00-BA0A-4E98-A4F5-DF33F4AC9D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AED6F00-BA0A-4E98-A4F5-DF33F4AC9D02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF9A86BE-71C4-44C7-BD35-42EDA9598B2F}
+	EndGlobalSection
+EndGlobal

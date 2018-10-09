@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
+    "OpenIdIssuer": "YOUR_AUTH0_DOMAIN",
+    "OpenIdAudience": "http://localhost:7071"
+  },
+  "Host": {
+    "CORS":  "*"
+  }
+}
