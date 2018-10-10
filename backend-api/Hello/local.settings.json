@@ -3,7 +3,7 @@
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "AzureWebJobsDashboard": "UseDevelopmentStorage=true",
-    "OpenIdIssuer": "https://my-demo-auth.au.auth0.com/",
+    "OpenIdIssuer": "YOUR_AUTH0_DOMAIN",
     "OpenIdAudience": "http://localhost:7071"
   },
   "Host": {
