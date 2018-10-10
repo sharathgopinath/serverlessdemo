@@ -8,7 +8,7 @@ export const environment = {
       logoutURL: 'http://localhost:4200'
     },
     helloApi: {
-        url: 'YOUR_API_URL'
+        url: 'YOUR_API_URL' 
     }
   };
   
