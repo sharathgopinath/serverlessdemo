@@ -4,3 +4,5 @@
 
 /backend-api/Hello/Properties/PublishProfiles/azure-web-demo - Web Deploy.pubxml
 demo-app/src/app/environments/environment.ts
+backend-api/Hello/local.settings.json
+demo-app/src/app/environments/environment.ts

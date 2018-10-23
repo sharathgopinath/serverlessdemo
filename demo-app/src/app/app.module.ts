@@ -10,13 +10,15 @@ import { HelloService } from './hello/hello.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HelloComponent } from './hello/hello.component';
 import { TokenInterceptor } from './auth/auth.interceptor';
+import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CallbackComponent,
-    HelloComponent
+    HelloComponent,
+    TopNavBarComponent
   ],
   imports: [
     BrowserModule,

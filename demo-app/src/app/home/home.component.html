@@ -1,12 +1,8 @@
-<app-hello *ngIf="authService.isLoggedIn()" name="{{name}}"></app-hello>
-
-<div class="login-btn col-sm-6" *ngIf="!authService.isLoggedIn()">
-  <button type="button" class="btn btn-primary" (click) = authService.login()>
-    Login
-  </button>
+<div class="jumbotron" *ngIf="authService.isLoggedIn()">
+    <div class="container">
+      <app-hello name="{{name}}"></app-hello>
+    </div>
 </div>
-<div class="logout-btn col-sm-6" *ngIf="authService.isLoggedIn()">
-  <button class="btn btn-warning" (click)="authService.logout()">
-    Logout
-  </button>
+<div class="container">
+
 </div>
