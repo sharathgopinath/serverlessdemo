@@ -11,7 +11,7 @@ export class HelloComponent implements OnInit {
   public welcomeQuote:string;
   @Input() name:string;
   
-  constructor(private authService: AuthService,
+  constructor(public authService: AuthService,
             private service: HelloService) { }
 
   ngOnInit() {
