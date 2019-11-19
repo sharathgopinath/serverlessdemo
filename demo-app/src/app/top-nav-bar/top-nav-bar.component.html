@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Demo App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavBar" aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="topNavBar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+      <button *ngIf="!authService.isLoggedIn()" type="button" class="btn btn-primary" (click) = authService.login()>
+          Login
+      </button>
+      <button *ngIf="authService.isLoggedIn()" class="btn btn-warning" (click)="authService.logout()">
+          Logout
+        </button>
+    </div>
+</nav>
